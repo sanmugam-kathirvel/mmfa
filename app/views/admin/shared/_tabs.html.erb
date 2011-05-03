@@ -1,0 +1,27 @@
+<ul id="nav">
+    <li><%= link_to "Dashboard", "/admin" %></li>
+    <li><%= link_to "Users", "/admin/users" %>
+        <ul>
+        <li><%= link_to "All users", admin_users_url %></li>
+		<li><%= link_to "Active users only", active_admin_users_url %></li>
+		<li><%= link_to "Suspended users only", suspended_admin_users_url %></li>
+		<li><%= link_to "Pending users only", pending_admin_users_url %></li>
+		<li><%= link_to "Deleted users only", deleted_admin_users_url %></li>
+
+        </ul>
+        <div class="clear"></div>
+    </li>
+    <li><%= link_to "Announcement", "/admin/announcements" %>
+    <ul>
+        <li><a href="#">Item 04</a></li>
+        <li><a href="#">Item 05</a></li>
+        <li><a href="#">Item 06</a></li>
+        <li><a href="#">Item 07</a></li>
+    </ul>        
+        <div class="clear"></div>
+    </li>
+    <li><%= link_to "commits" , "/admin/commits"%></li>
+</ul>
+ 
+<div class="clear"></div>
+
