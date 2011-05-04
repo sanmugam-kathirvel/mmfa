@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   
-  before_filter :prepare_for_mobile
+#  before_filter :prepare_for_mobile
   
   helper :all # include all helpers, all the time
   
@@ -25,7 +25,7 @@ class ApplicationController < ActionController::Base
       "application"
     end
   end
-    
+=begin   
   private
 
   def mobile_device?
@@ -41,5 +41,5 @@ class ApplicationController < ActionController::Base
     session[:mobile_param] = params[:mobile] if params[:mobile]
     request.format = :mobile if mobile_device?
   end
-
+=end
 end
