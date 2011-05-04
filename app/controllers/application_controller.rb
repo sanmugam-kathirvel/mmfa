@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   
- # before_filter :prepare_for_mobile
-  layout :detect_browser
+  before_filter :prepare_for_mobile
+  
   helper :all # include all helpers, all the time
   
   # Return the value for a given setting
@@ -27,6 +27,7 @@ class ApplicationController < ActionController::Base
   end
   
 #mobile browser
+=begin
 private
   MOBILE_BROWSERS = ["android", "ipod", "opera mini", "blackberry", "palm","hiptop","avantgo","plucker", "xiino","blazer","elaine", "windows ce; ppc;", "windows ce; smartphone;","windows ce; iemobile", "up.browser","up.link","mmp","symbian","smartphone", "midp","wap","vodafone","o2","pocket","kindle", "mobile","pda","psp","treo"]
 
@@ -37,8 +38,8 @@ private
     end
     return "application"
   end  
-  
-=begin   
+=end
+#=begin   
   private
 
   def mobile_device?
@@ -54,5 +55,5 @@ private
     session[:mobile_param] = params[:mobile] if params[:mobile]
     request.format = :mobile if mobile_device?
   end
-=end
+#=end
 end
