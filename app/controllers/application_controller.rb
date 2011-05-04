@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   
-#  before_filter :prepare_for_mobile
-  
+ # before_filter :prepare_for_mobile
+  layout :detect_browser
   helper :all # include all helpers, all the time
   
   # Return the value for a given setting
@@ -25,6 +25,19 @@ class ApplicationController < ActionController::Base
       "application"
     end
   end
+  
+#mobile browser
+private
+  MOBILE_BROWSERS = ["android", "ipod", "opera mini", "blackberry", "palm","hiptop","avantgo","plucker", "xiino","blazer","elaine", "windows ce; ppc;", "windows ce; smartphone;","windows ce; iemobile", "up.browser","up.link","mmp","symbian","smartphone", "midp","wap","vodafone","o2","pocket","kindle", "mobile","pda","psp","treo"]
+
+  def detect_browser
+    agent = request.headers["HTTP_USER_AGENT"].downcase
+    MOBILE_BROWSERS.each do |m|
+      return "mobile_application" if agent.match(m)
+    end
+    return "application"
+  end  
+  
 =begin   
   private
 
