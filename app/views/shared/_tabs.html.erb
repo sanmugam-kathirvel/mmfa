@@ -1,23 +1,33 @@
 <ul id="nav">
     <li><%= link_to "Dashboard", "/" %></li>
-    <li><%= link_to "Dashboard", "/" %>
+    <li><%= link_to "MSRplanner", "#" %>
         <ul>
-            <li><%= link_to "Dashboard", "/" %></li>
-            <li><%= link_to "Dashboard", "/" %></li>
-            <li><%= link_to "Dashboard", "/" %></li>
+	    <li><%= link_to "MSRplanner", "/msrplanners" %>
+	    <li><%= link_to "New MSRplanner", "/msrplanners/new" %></li>
+            <li><%= link_to "Doctors", "/doctors" %></li>
+            <li><%= link_to "Doctor Spels", "/doctor_spels" %></li>
         </ul>
         <div class="clear"></div>
     </li>
-    <li><a href="#">Parent 03</a>
-    <ul>
-        <li><a href="#">Item 04</a></li>
-        <li><a href="#">Item 05</a></li>
-        <li><a href="#">Item 06</a></li>
-        <li><a href="#">Item 07</a></li>
-    </ul>        
+    <li><%= link_to "Standared Visit", "#" %>
+    	<ul>
+        	<li><%= link_to "Standared Visit", "/standared_visits" %>
+        	<li><%= link_to "New Standared Visit", "/standared_visits/new" %>        
+    	</ul>        
         <div class="clear"></div>
     </li>
-    <li><a href="#">Parent 04</a></li>
-</ul>
- 
-<div class="clear"></div>
+  <li><%= link_to "Toutprogram", "#" %>
+    	<ul>
+        	<li><%= link_to "Tourprogrm", "/tourprograms" %>
+        	<li><%= link_to "New Tourprogrm", "/tourprograms/new" %>     
+    	</ul>        
+        <div class="clear"></div>
+    </li>
+  <li><%= link_to "Classification Doctors", "#" %>
+    	<ul>
+        	<li><%= link_to "Classification Doctors", "/classification_doctors" %>
+        	<li><%= link_to "New Classification Doctors", "/classification_doctors/new" %>     
+    	</ul>        
+        <div class="clear"></div>
+    </li>
+<br>    

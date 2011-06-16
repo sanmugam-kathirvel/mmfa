@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @admin_headquator.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @admin_headquator.address %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @admin_headquator.phone %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_headquator_path(@admin_headquator) %> |
+<%= link_to 'Back', admin_headquators_path %>

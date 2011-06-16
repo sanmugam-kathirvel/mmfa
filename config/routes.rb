@@ -1,5 +1,25 @@
 Rails3::Application.routes.draw do
   
+  resources :tourprograms
+
+  resources :standared_visits
+
+  resources :classification_doctors
+
+  resources :towns
+
+  resources :msrplanners
+
+  resources :doctors
+
+  resources :doctor_spels
+
+  resources :stocks
+
+  namespace :admin do resources :regions end
+
+  namespace :admin do resources :headquators end
+
   devise_for :users, :controllers => { :sessions => "user_sessions" },
     :path_names => { :sign_in => 'login', :sign_out => 'logout',  :registration => 'register' }
 

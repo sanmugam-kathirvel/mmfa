@@ -1,0 +1,35 @@
+<h1>Listing stocks</h1>
+
+<table>
+  <tr>
+    <th>Tft</th>
+    <th>Tfs</th>
+    <th>Vrx</th>
+    <th>Lux</th>
+    <th>Nur xl</th>
+    <th>Cof</th>
+    <th>Ele</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @stocks.each do |stock| %>
+  <tr>
+    <td><%= stock.tft %></td>
+    <td><%= stock.tfs %></td>
+    <td><%= stock.vrx %></td>
+    <td><%= stock.lux %></td>
+    <td><%= stock.nur_xl %></td>
+    <td><%= stock.cof %></td>
+    <td><%= stock.ele %></td>
+    
+    <td><%= link_to 'Edit', edit_stock_path(stock) %></td>
+    
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Stock', new_stock_path %>

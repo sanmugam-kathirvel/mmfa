@@ -10,9 +10,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110502164617) do
+ActiveRecord::Schema.define(:version => 20110615180018) do
 
-  create_table "admin_companies", :force => true do |t|
+  create_table "admin_headquators", :force => true do |t|
+    t.string   "name"
+    t.text     "address"
+    t.integer  "phone"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "admin_regions", :force => true do |t|
+    t.integer  "headquator_id"
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -27,8 +36,46 @@ ActiveRecord::Schema.define(:version => 20110502164617) do
     t.datetime "updated_at"
   end
 
-  create_table "employees", :force => true do |t|
+  create_table "classification_doctors", :force => true do |t|
+    t.integer  "town_id"
+    t.integer  "ophthalmologist"
+    t.integer  "physiologists"
+    t.integer  "neurosurgeons"
+    t.integer  "cardiologist"
+    t.integer  "allopathy"
+    t.integer  "pediatrician"
+    t.integer  "urologists"
+    t.integer  "surgeons"
+    t.integer  "other"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "doctor_spels", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "doctors", :force => true do |t|
+    t.string   "name"
+    t.integer  "doctor_spel_id"
+    t.text     "address"
+    t.string   "phone"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "msrplanners", :force => true do |t|
+    t.integer  "doctor_id"
+    t.integer  "doctor_spel_id"
+    t.float    "tft"
+    t.float    "tfs"
+    t.float    "vrx"
+    t.float    "lux"
+    t.float    "nurxl"
+    t.float    "cof"
+    t.float    "ele"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -57,6 +104,47 @@ ActiveRecord::Schema.define(:version => 20110502164617) do
     t.text     "description"
     t.string   "field_type",  :default => "string"
     t.text     "value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "standared_visits", :force => true do |t|
+    t.integer  "doctor_id"
+    t.integer  "doctor_spel_id"
+    t.string   "call"
+    t.string   "product1"
+    t.string   "product2"
+    t.string   "product3"
+    t.string   "month_of_visit"
+    t.float    "amc"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "stocks", :force => true do |t|
+    t.float    "tft"
+    t.float    "tfs"
+    t.float    "vrx"
+    t.float    "lux"
+    t.float    "nur_xl"
+    t.float    "cof"
+    t.float    "ele"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tourprograms", :force => true do |t|
+    t.integer  "town_id"
+    t.string   "headquators"
+    t.string   "Distance"
+    t.float    "Fare"
+    t.integer  "no_of_visited_doctors"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "towns", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

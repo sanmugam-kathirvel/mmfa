@@ -1,0 +1,41 @@
+<h1>Listing classification_doctors</h1>
+
+<table>
+  <tr>
+    <th>Town</th>
+    <th>Ophthalmologist</th>
+    <th>Physiologists</th>
+    <th>Neurosurgeons</th>
+    <th>Cardiologist</th>
+    <th>Allopathy</th>
+    <th>Pediatrician</th>
+    <th>Urologists</th>
+    <th>Surgeons</th>
+    <th>Other</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @classification_doctors.each do |classification_doctor| %>
+  <tr>
+    <td><%= classification_doctor.town.name %></td>
+    <td><%= classification_doctor.ophthalmologist %></td>
+    <td><%= classification_doctor.physiologists %></td>
+    <td><%= classification_doctor.neurosurgeons %></td>
+    <td><%= classification_doctor.cardiologist %></td>
+    <td><%= classification_doctor.allopathy %></td>
+    <td><%= classification_doctor.pediatrician %></td>
+    <td><%= classification_doctor.urologists %></td>
+    <td><%= classification_doctor.surgeons %></td>
+    <td><%= classification_doctor.other %></td>
+    <td><%= link_to 'Show', classification_doctor %></td>
+    <td><%= link_to 'Edit', edit_classification_doctor_path(classification_doctor) %></td>
+    <td><%= link_to 'Destroy', classification_doctor, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Classification doctor', new_classification_doctor_path %>

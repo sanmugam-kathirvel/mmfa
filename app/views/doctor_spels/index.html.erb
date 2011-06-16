@@ -1,0 +1,23 @@
+<h1>Listing doctor_spels</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @doctor_spels.each do |doctor_spel| %>
+  <tr>
+    <td><%= doctor_spel.name %></td>
+    <td><%= link_to 'Show', doctor_spel %></td>
+    <td><%= link_to 'Edit', edit_doctor_spel_path(doctor_spel) %></td>
+    <td><%= link_to 'Destroy', doctor_spel, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Doctor spel', new_doctor_spel_path %>

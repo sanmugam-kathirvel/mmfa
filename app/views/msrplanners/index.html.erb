@@ -1,0 +1,64 @@
+<html>
+<head>
+</head>
+<body>
+<h1><center>MSR Daily Call Planner</center></h1>
+<center>
+<table border=1>
+<tr>
+  <td width="45" height="15" align=center>Name</td>
+  <td width="45" height="15" align=center colspan=1></td>
+  <td width="45" height="15" align=center>H.Q.</td>
+  <td width="45" height="15" align=center colspan=1></td>
+  <td width="45" height="15" align=center colspan=2>Territory code</td>
+  <td width="45" height="15" align=center colspan=1></td>
+  <td width="45" height="15" align=center colspan=3>Place of work:</td>
+  <td width="45" height="15" align=center colspan=2>Date:</td>
+  </tr>
+<tr>
+  <td width="45" height="15"></td>
+  <td width="45" height="15" align=center>HQ</td>
+  <td width="45" height="15" align=center>Ex.HQ</td>
+  <td width="45" height="15" align=center>OS</td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15" rowspan=2 align=center>TFT</td>
+  <td width="45" height="15" rowspan=2 align=center>TFS</td>
+  
+  
+  <td width="45" height="15" rowspan=2 align=center>VRX</td>
+  <td width="45" height="15" rowspan=2 align=center>LUK</td>
+
+  <td width="45" height="15" rowspan=2 colspan=1 align=center>NUR XL</td>
+  <td width="45" height="15" rowspan=2 align=center>COF</td>
+  <td width="45" height="15" rowspan=2 align=center>ELE</td>
+  
+  
+</tr>
+<tr>
+  <td width="45" height="15">SVL.NO.</td>
+  <td width="45" height="15" colspan=3 align=center>Doctor's Name</td>
+  <td width="45" height="15" align=center>SPL</td>
+</tr>
+<% @msrplanners.each_with_index do |msrplanner,index| %>
+  <tr>
+    <td width="45" height="15" align=center><%= index+1 %></td>
+    <td colspan=3 width="45" height="15" align=center><%= msrplanner.doctor.name %></td>
+    <td width="45" height="15" align=center><%= msrplanner.doctor_spel.name %></td>
+    <td width="45" height="15" align=center><%= msrplanner.tft %></td>
+    <td width="45" height="15" align=center><%= msrplanner.tfs %></td>
+    <td width="45" height="15" align=center><%= msrplanner.vrx %></td>
+    <td width="45" height="15" align=center><%= msrplanner.lux %></td>
+    <td width="45" height="15" align=center><%= msrplanner.cof %></td>
+    <td width="45" height="15" align=center><%= msrplanner.ele %></td>
+    <td width="45" height="15" align=center><%= msrplanner.nurxl %></td>
+    <td width="45" height="15" align=center><%= link_to 'Show', msrplanner %></td>
+    <td width="45" height="15" align=center><%= link_to 'Edit', edit_msrplanner_path(msrplanner) %></td>
+    <td width="45" height="15" align=center><%= link_to 'Destroy', msrplanner, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+
+  </table>
+  </center>
+</body
+</html>
+<%= link_to 'New Msrplanner', new_msrplanner_path %>

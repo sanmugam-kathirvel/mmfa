@@ -1,0 +1,39 @@
+<h1>Listing msrplanners</h1>
+
+<table>
+  <tr>
+    <th>Doctor</th>
+    <th>Doctor spel</th>
+    <th>Tft</th>
+    <th>Tfs</th>
+    <th>Vrx</th>
+    <th>Lux</th>
+    <th>Nurxl</th>
+    <th>Cof</th>
+    <th>Ele</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @msrplanners.each do |msrplanner| %>
+  <tr>
+    <td><%= msrplanner.doctor.name %></td>
+    <td><%= msrplanner.doctor_spel.name %></td>
+    <td><%= msrplanner.tft %></td>
+    <td><%= msrplanner.tfs %></td>
+    <td><%= msrplanner.vrx %></td>
+    <td><%= msrplanner.lux %></td>
+    <td><%= msrplanner.nurxl %></td>
+    <td><%= msrplanner.cof %></td>
+    <td><%= msrplanner.ele %></td>
+    <td><%= link_to 'Show', msrplanner %></td>
+    <td><%= link_to 'Edit', edit_msrplanner_path(msrplanner) %></td>
+    <td><%= link_to 'Destroy', msrplanner, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Msrplanner', new_msrplanner_path %>

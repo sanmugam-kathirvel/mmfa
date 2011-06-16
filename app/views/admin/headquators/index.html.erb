@@ -1,0 +1,27 @@
+<h1>Listing admin_headquators</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Phone</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @admin_headquators.each do |admin_headquator| %>
+  <tr>
+    <td><%= admin_headquator.name %></td>
+    <td><%= admin_headquator.address %></td>
+    <td><%= admin_headquator.phone %></td>
+    <td><%= link_to 'Show', admin_headquator %></td>
+    <td><%= link_to 'Edit', edit_admin_headquator_path(admin_headquator) %></td>
+    <td><%= link_to 'Destroy', admin_headquator, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Headquator', new_admin_headquator_path %>

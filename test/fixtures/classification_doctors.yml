@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  town: 
+  ophthalmologist: 1
+  physiologists: 1
+  neurosurgeons: 1
+  cardiologist: 1
+  allopathy: 1
+  pediatrician: 1
+  urologists: 1
+  surgeons: 1
+  other: 1
+
+two:
+  town: 
+  ophthalmologist: 1
+  physiologists: 1
+  neurosurgeons: 1
+  cardiologist: 1
+  allopathy: 1
+  pediatrician: 1
+  urologists: 1
+  surgeons: 1
+  other: 1

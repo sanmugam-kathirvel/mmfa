@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  doctor: 
+  doctor_spel: 
+  tft: 1.5
+  tfs: 1.5
+  vrx: 1.5
+  lux: 1.5
+  nurxl: 1.5
+  cof: 1.5
+  ele: 1.5
+
+two:
+  doctor: 
+  doctor_spel: 
+  tft: 1.5
+  tfs: 1.5
+  vrx: 1.5
+  lux: 1.5
+  nurxl: 1.5
+  cof: 1.5
+  ele: 1.5

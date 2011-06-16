@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  doctor: 
+  doctor: 
+  doctor_spel: 
+  call: MyString
+  product1: MyString
+  product2: MyString
+  product3: MyString
+  month_of_visit: MyString
+  amc: 1.5
+
+two:
+  doctor: 
+  doctor: 
+  doctor_spel: 
+  call: MyString
+  product1: MyString
+  product2: MyString
+  product3: MyString
+  month_of_visit: MyString
+  amc: 1.5

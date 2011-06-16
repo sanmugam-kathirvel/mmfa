@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  tft: 1.5
+  tfs: 1.5
+  vrx: 1.5
+  lux: 1.5
+  nur_xl: 1.5
+  cof: 1.5
+  ele: 1.5
+
+two:
+  tft: 1.5
+  tfs: 1.5
+  vrx: 1.5
+  lux: 1.5
+  nur_xl: 1.5
+  cof: 1.5
+  ele: 1.5

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Town:</b>
+  <%= @tourprogram.town.name %>
+</p>
+
+<p>
+  <b>Headquators:</b>
+  <%= @tourprogram.headquators %>
+</p>
+
+<p>
+  <b>Distance:</b>
+  <%= @tourprogram.Distance %>
+</p>
+
+<p>
+  <b>Fare:</b>
+  <%= @tourprogram.Fare %>
+</p>
+
+<p>
+  <b>No of visited doctors:</b>
+  <%= @tourprogram.no_of_visited_doctors %>
+</p>
+
+
+<%= link_to 'Edit', edit_tourprogram_path(@tourprogram) %> |
+<%= link_to 'Back', tourprograms_path %>

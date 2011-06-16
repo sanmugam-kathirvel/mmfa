@@ -1,0 +1,57 @@
+<%= form_for(@classification_doctor) do |f| %>
+  <% if @classification_doctor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@classification_doctor.errors.count, "error") %> prohibited this classification_doctor from being saved:</h2>
+
+      <ul>
+      <% @classification_doctor.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :town %><br />
+    <%= f.collection_select :town_id,Town.all,:id,:name %>
+  </div>
+  <div class="field">
+    <%= f.label :ophthalmologist %><br />
+    <%= f.text_field :ophthalmologist %>
+  </div>
+  <div class="field">
+    <%= f.label :physiologists %><br />
+    <%= f.text_field :physiologists %>
+  </div>
+  <div class="field">
+    <%= f.label :neurosurgeons %><br />
+    <%= f.text_field :neurosurgeons %>
+  </div>
+  <div class="field">
+    <%= f.label :cardiologist %><br />
+    <%= f.text_field :cardiologist %>
+  </div>
+  <div class="field">
+    <%= f.label :allopathy %><br />
+    <%= f.text_field :allopathy %>
+  </div>
+  <div class="field">
+    <%= f.label :pediatrician %><br />
+    <%= f.text_field :pediatrician %>
+  </div>
+  <div class="field">
+    <%= f.label :urologists %><br />
+    <%= f.text_field :urologists %>
+  </div>
+  <div class="field">
+    <%= f.label :surgeons %><br />
+    <%= f.text_field :surgeons %>
+  </div>
+  <div class="field">
+    <%= f.label :other %><br />
+    <%= f.text_field :other %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,25 @@
+<%= form_for(@admin_region) do |f| %>
+  <% if @admin_region.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@admin_region.errors.count, "error") %> prohibited this admin_region from being saved:</h2>
+
+      <ul>
+      <% @admin_region.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :headquator %><br />
+    <%= f.text_field :headquator %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

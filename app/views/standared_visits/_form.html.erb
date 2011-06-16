@@ -1,0 +1,53 @@
+<%= form_for(@standared_visit) do |f| %>
+  <% if @standared_visit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@standared_visit.errors.count, "error") %> prohibited this standared_visit from being saved:</h2>
+
+      <ul>
+      <% @standared_visit.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :doctor %><br />
+    <%= f.collection_select :doctor_id,Doctor.all,:id,:name %>
+  </div>
+  <div class="field">
+    <%= f.label :doctor %><br />
+    <%= f.collection_select :doctor_id,Doctor.all,:id,:address %>
+  </div>
+  <div class="field">
+    <%= f.label :doctor_spel %><br />
+    <%= f.collection_select :doctor_spel_id,DoctorSpel.all,:id,:name %>
+  </div>
+  <div class="field">
+    <%= f.label :call %><br />
+    <%= f.select (:call,["SVC","MVC"])  %>
+  </div>
+  <div class="field">
+    <%= f.label :product1 %><br />
+    <%= f.select(:product1,["TFT","TFS","VRX","LUK","NUR XL","COF","ELE"]) %>
+  </div>
+  <div class="field">
+    <%= f.label :product2 %><br />
+    <%= f.select(:product2,["TFT","TFS","VRX","LUK","NUR XL","COF","ELE"]) %>
+  </div>
+  <div class="field">
+    <%= f.label :product3 %><br />
+    <%= f.select(:product3,["TFT","TFS","VRX","LUK","NUR XL","COF","ELE"]) %>
+  </div>
+  <div class="field">
+    <%= f.label :month_of_visit %><br />
+    <%= f.select(:month_of_visit,["Jan","Feb","Mar","Apr","May","Jun","july","Aug","Sep","Oct","Nov","Dec"]) %>
+  </div>
+  <div class="field">
+    <%= f.label :amc %><br />
+    <%= f.text_field :amc %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

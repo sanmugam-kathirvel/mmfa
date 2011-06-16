@@ -1,0 +1,39 @@
+<h1>Listing standared_visits</h1>
+
+<table>
+  <tr>
+    <th>Doctor</th>
+    <th>Doctor</th>
+    <th>Doctor spel</th>
+    <th>Call</th>
+    <th>Product1</th>
+    <th>Product2</th>
+    <th>Product3</th>
+    <th>Month of visit</th>
+    <th>Amc</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @standared_visits.each do |standared_visit| %>
+  <tr>
+    <td><%= standared_visit.doctor.name %></td>
+    <td><%= standared_visit.doctor.address %></td>
+    <td><%= standared_visit.doctor_spel.name %></td>
+    <td><%= standared_visit.call %></td>
+    <td><%= standared_visit.product1 %></td>
+    <td><%= standared_visit.product2 %></td>
+    <td><%= standared_visit.product3 %></td>
+    <td><%= standared_visit.month_of_visit %></td>
+    <td><%= standared_visit.amc %></td>
+    <td><%= link_to 'Show', standared_visit %></td>
+    <td><%= link_to 'Edit', edit_standared_visit_path(standared_visit) %></td>
+    <td><%= link_to 'Destroy', standared_visit, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Standared visit', new_standared_visit_path %>

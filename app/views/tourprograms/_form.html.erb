@@ -1,0 +1,37 @@
+<%= form_for(@tourprogram) do |f| %>
+  <% if @tourprogram.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tourprogram.errors.count, "error") %> prohibited this tourprogram from being saved:</h2>
+
+      <ul>
+      <% @tourprogram.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :town %><br />
+    <%= f.collection_select :town_id,Town.all,:id,:name %>
+  </div>
+  <div class="field">
+    <%= f.label :headquators %><br />
+    <%= f.select (:headquators,["Chennai","Mumbai","Delhi","Namakkal"]) %>
+  </div>
+  <div class="field">
+    <%= f.label :Distance %><br />
+    <%= f.text_field :Distance %>
+  </div>
+  <div class="field">
+    <%= f.label :Fare %><br />
+    <%= f.text_field :Fare %>
+  </div>
+  <div class="field">
+    <%= f.label :no_of_visited_doctors %><br />
+    <%= f.text_field :no_of_visited_doctors %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

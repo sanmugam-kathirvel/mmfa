@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Town:</b>
+  <%= @classification_doctor.town.name %>
+</p>
+
+<p>
+  <b>Ophthalmologist:</b>
+  <%= @classification_doctor.ophthalmologist %>
+</p>
+
+<p>
+  <b>Physiologists:</b>
+  <%= @classification_doctor.physiologists %>
+</p>
+
+<p>
+  <b>Neurosurgeons:</b>
+  <%= @classification_doctor.neurosurgeons %>
+</p>
+
+<p>
+  <b>Cardiologist:</b>
+  <%= @classification_doctor.cardiologist %>
+</p>
+
+<p>
+  <b>Allopathy:</b>
+  <%= @classification_doctor.allopathy %>
+</p>
+
+<p>
+  <b>Pediatrician:</b>
+  <%= @classification_doctor.pediatrician %>
+</p>
+
+<p>
+  <b>Urologists:</b>
+  <%= @classification_doctor.urologists %>
+</p>
+
+<p>
+  <b>Surgeons:</b>
+  <%= @classification_doctor.surgeons %>
+</p>
+
+<p>
+  <b>Other:</b>
+  <%= @classification_doctor.other %>
+</p>
+
+
+<%= link_to 'Edit', edit_classification_doctor_path(@classification_doctor) %> |
+<%= link_to 'Back', classification_doctors_path %>
